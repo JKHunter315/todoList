@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&family=Ubuntu:wght@300&display=swap');
+
+html {
+  font-family: 'Raleway', sans-serif;
+  color: rgb(230,230,230);
+  background-color: #111E26;
+  font-weight: 500;
+}
+
+.bullet-point {
+  height: 1.5em;
+  width: 1.5em;
+  display: inline-block;
+  margin-top: 1.6em;
+  margin-right: 1em;
+}
+
+#logo {
+  height: 2.9em;
+  width: 3.3em;
+  margin-top: .5em;
+}
+
+h1 {
+  color: white;
+  padding-left: .7em;
+  font-size: 2em;
+}
+
+#title {
+  display: flex;
+  margin: 1em;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+  background-color: #223948;
+  height: 100%;
+  position: fixed;
+  width: 18.5em;
+  top: 0;
+  bottom: 0;
+  margin-left: -.5em;
+  padding-left: .8em;
+  font-weight: 500;
+}
+
+#projects {
+  font-size: .9em;
+}
+
+.project {
+  display: flex;
+  padding-left: 1em;
+  margin-top: -.7em;
+}
+
+.project-name {
+  font-size: 1.5em;
+}
+
+.nav-delete-button {
+  width: 2.4em;
+  height: 2.4em;
+  position: absolute;
+  right: 1em;
+  margin-top: 1.2em;
+}
+
+#nav-title {
+  font-size: 1.7em;
+  margin-left: .2em;
+  color: white;
+  letter-spacing: .4px;
+}
+
+#nav-add-proj-btn {
+  height: 1em;
+  width: 1.7em;
+  display: inline-block;
+  position: absolute;
+  margin-left: -.9em;
+  font-size: 3em;
+  margin-top: -.5em;
+}
+
+nav > form > button {
+  background-color: transparent;
+  border-style: none;
+  width: 3em;
+  margin-left: .1em;
+  height: 3em;
+  margin-top:.5em;
+}
+
+button:hover, .bullet-point:hover, .project-name:hover, .delete-button:hover, #add-list-btn:hover, 
+#open-task-form:hover, .edit-task:hover, .checkbox:hover, .task-title:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+nav > form > input {
+  width: 10em;
+  height: 1.8em;
+  font-size: 1.4em;
+  position: absolute;
+  border-style: none;
+  left: 2.2em;
+}
+
+nav > form {
+  position: absolute;
+  bottom: 1.2em;
+  left: 1.2em;
+}
+
+input[type="text"]{
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#project-content {
+  margin-left: 21em;
+}
+
+#project-main-header {
+  font-size: 4em;
+  letter-spacing: 2px;
+}
+
+.checkbox {
+  height: 1.1em;
+  width: 1.1em;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: .7em;
+  margin-right: 1em;
+  border: .23em solid #a9db3d;
+}
+
+li {
+  font-size: 1.7em;
+  list-style: none;
+  display: flex;
+  margin-left: -1em;
+  padding-left: 1em;
+  flex-direction: column;
+  border-bottom: .1em solid rgba(255,255,255,0.2);
+}
+
+.low-prior {
+  border-color: #a9db3d;
+}
+
+.mid-prior {
+  border-color: #F0B160;
+}
+
+.high-prior {
+  border-color: #F3484B;
+}
+
+.task-item {
+  display: flex;
+}
+
+.task-item > time {
+  position: absolute;
+  right: 5em;
+  font-size: .7em;
+  margin-top: 1.7em;
+}
+
+.info {
+  font-size: .8em;
+  padding-left: 2.4em;
+  color: #101E26;
+  background-color: rgb(255,255,255);
+  margin-left: -1.3em;
+  opacity: 88%;
+  border-radius: .4em 4px 0 0;
+}
+
+.edit-task {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  right: 1em;
+  display: inline-block;
+  margin-top: -2.5em;
+  opacity: 60%;
+}
+
+#add-list-btn {
+  height: 2em;
+  width: 2em;
+  margin-left: -.1em;
+  margin-top: .6em;
+  position: absolute;
+  display: inline-block;
+}
+
+#open-task-form {
+  font-size: 1em;
+  margin-left: 2.8em;
+  color: rgba(255,255,255,0.4);
+}
+
+#add-task-form, #edit-task-form {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  text-align: center;
+  right: 0;
+  left: 0;
+  color: #1e333f;
+  margin-top: 3em;
+  background-color: #d1d1d1;
+  margin-left: 20em;
+  margin-right: 20em;
+  border-radius: 2em;
+  border: .3em solid #1e333f;
+}
+
+#add-task-background-cover, #edit-task-background-cover {
+  background-color: rgba(0,0,0,0.84);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  margin-left: -.6em;
+  top: 0;
+  bottom: 0;
+  display: none;
+}
+
+#add-task-form > input, #edit-task-form > input {
+  height: 1.66em;
+  font-size: 1.4em;
+  width: 30em;
+  border-radius: .3em;
+  border: .1em double #16252d;
+  padding-left: .6em;
+  color: #1e333f;
+  background-color: white;
+}
+
+form > h2 {
+  font-size: 2.4em;
+}
+
+div > form > button {
+  font-size: 2em;
+  display: block;
+  margin: .7em auto;
+  width: 20%;
+  color: #0260e5;
+  background-color: transparent;
+  border-style: none;
+  font-weight: 600;
+}
+
+.task-item > .task-delete-button {
+  width: 1.6em;
+  height: 1.6em;
+  position: absolute;
+  right: 1em;
+  margin-top: .8em;
+  opacity: 60%;
+}
+
+.task-delete-button:hover, .edit-task:hover {
+  opacity: 86%;
+  cursor: pointer;
+}
+
+form > p {
+  font-size: 2em;
+}
+
+input[type="radio"] {
+  transform: scale(5);
+  margin: auto 5em;
+  cursor: pointer;
+  margin-top: 2em;
+  margin-bottom: 2.4em;
+}
+
+#low-prior-button:after, #low-prior-edit:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border-radius: 5px;
+  border: .5px solid rgba(40,40,40,0.6);
+}
+
+#med-prior-button:after, #med-prior-edit:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border-radius: 5px;
+  border: .5px solid rgba(40,40,40,0.6);
+}
+
+#high-prior-button:after, #high-prior-edit:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border-radius: 5px;
+  border: .5px solid rgba(40,40,40,0.6);
+}
+
+#low-prior-button:checked:after, #low-prior-edit:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #a9db3d;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border-radius: 5px;
+  border: .5px solid rgba(40,40,40,0.6);
+}
+
+#med-prior-button:checked:after, #med-prior-edit:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #F0B160;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border-radius: 5px;
+  border: .5px solid rgba(40,40,40,0.6);
+}
+
+#high-prior-button:checked:after, #high-prior-edit:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #F3484B;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border-radius: 5px;
+  border: .5px solid rgba(40,40,40,0.6);
+}
+
+#edit-cancel-container > button {
+  background-color: transparent;
+  border-style: none;
+  font-size: 2em;
+  margin: .7em 1.4em;
+  font-weigth: 600;
+}
+
+#edit-task-button {
+  color: #0260e5;
+}
+
+#cancel-edit-button {
+  color: #c44651;
+}
