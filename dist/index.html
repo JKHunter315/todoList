@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Taskzilla </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <nav id="sidebar">
+            <div id="title">
+                <img src="https://image.flaticon.com/icons/png/512/148/148862.png" id="logo">
+                <h2 id="nav-title"> Taskzilla </h2>
+            </div>
+            <div id="projects">
+                <h1> Projects </h1>
+                <div class="project">
+                    <img class="bullet-point" src="https://image.flaticon.com/icons/png/512/148/148895.png">
+                    <p class="project-name">General</p>
+                </div>
+                <div class="project">
+                    <img class="bullet-point" src="https://image.flaticon.com/icons/png/512/148/148895.png">
+                    <p class="project-name">Shopping</p>
+                    <img src="https://image.flaticon.com/icons/svg/216/216658.svg" class="nav-delete-button">
+                </div>
+            </div>
+            <form id="nav-add-project">
+                <button type="submit" id="nav-submit-hidden-btn">
+                    <img src="https://image.flaticon.com/icons/svg/225/225156.svg" id="nav-add-proj-btn">
+                </button>
+                <input type="text" name="add-project" id="add-project-field" placeholder="Add new project" required>
+            </form>
+            </nav>
+            <div id="project-content">
+                <h1 id="project-main-header">General</h1>
+                <ul id="project-items">
+                    <li id="todo-add-li">
+                        <img src="https://image.flaticon.com/icons/svg/225/225156.svg" id="add-list-btn">
+                        <p id="open-task-form"> Add new task </p>
+                    </li>
+                </ul>
+            </div>
+            <div id="add-task-background-cover">
+                <form id="add-task-form">
+                    <h2> New reminder </h2>
+                    <input type="text" name="task-name" placeholder="New task" id="add-task-field" required>
+                    <p> Priority: </p>
+                <div id="prior-button-div">
+                    <input type="radio" name="prior-btn" id="low-prior-button" value="low-prior" checked>
+                    <input type="radio" name="prior-btn" id="med-prior-button" value="mid-prior">
+                    <input type="radio" name="prior-btn" id="high-prior-button" value="high-prior">
+                </div>
+                <p> Date: </p>
+                <input type="date" name="task-date" min="" required>
+                <p> Description: </p>
+                <input type="text" name="task-info" placeholder="Add some detail..." id="info-form-field">
+                <button type="submit" id="add-task-button"> Done </button>
+                </form>
+            </div>   
+            <div id="edit-task-background-cover">
+                <form id="edit-task-form">
+                    <h2> Edit reminder </h2>
+                    <input type="text" name="task-name" placeholder="Edit task name" id="edit-task-field" required>
+                    <p> Change priority: </p>
+                    <div id="edit-prior-div">
+                        <input type="radio" name="prior-btn" id="low-prior-edit" value="low-prior" checked>
+                        <input type="radio" name="prior-btn" id="med-prior-edit" value="mid-prior">
+                        <input type="radio" name="prior-btn" id="high-prior-edit" value="high-prior">
+                    </div>
+                    <p> Change date: </p>
+                    <input type="date" name="edit-date" min="" required>
+                    <p> Change description: </p>
+                    <input type="text" name="edit-info" placeholder="Edit details..." id="edit-info-field">
+                    <div id="edit-cancel-container">
+                        <button type="button" id="edit-task-button"> Done </button>
+                        <button type="button" id="cancel-edit-button"> Cancel </button>
+                    </div>
+                </form>
+            </div>                 
+        <script src="main.js"></script>
+    </body>
+</html>
